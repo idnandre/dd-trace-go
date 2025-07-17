@@ -20,6 +20,7 @@ import (
 	"github.com/DataDog/dd-trace-go/v2/internal"
 	"github.com/DataDog/dd-trace-go/v2/internal/log"
 	"github.com/DataDog/dd-trace-go/v2/internal/samplernames"
+	"github.com/davecgh/go-spew/spew"
 )
 
 // HTTPHeadersCarrier wraps an http.Header as a TextMapWriter and TextMapReader, allowing
@@ -450,7 +451,11 @@ func (p *propagator) injectTextMap(spanCtx *SpanContext, writer TextMapWriter) e
 	}
 	writer.Set(p.cfg.TraceHeader, strconv.FormatUint(ctx.traceID.Lower(), 10))
 	writer.Set(p.cfg.ParentHeader, strconv.FormatUint(ctx.spanID, 10))
+	fmt.Println("ctx", ctx)
+	fmt.Printf("injectTextMap ctx.SamplingPriority(): %v\n", spew.Sdump(ctx.SamplingPriority()))
+
 	if sp, ok := ctx.SamplingPriority(); ok {
+		fmt.Printf("propagator.injectTextMap sp: %v\n", sp)
 		writer.Set(p.cfg.PriorityHeader, strconv.Itoa(sp))
 	}
 	if ctx.origin != "" {

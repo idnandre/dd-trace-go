@@ -856,9 +856,11 @@ func (t *tracer) updateSampling(ctx *SpanContext) {
 	// it will lock the span and the trace mutexes in span.setSamplingPriorityLocked
 	// and trace.setSamplingPriority respectively, so we can't rely on those mutexes.
 	if ctx.trace.isLocked() {
+		fmt.Printf("updateSampling locked\n")
 		// trace sampling decision already taken and locked, no re-sampling shall occur
 		return
 	}
+	fmt.Printf("updateSampling not locked\n")
 
 	// the span was sampled with ManualKeep rules shouldn't override
 	if ctx.trace.propagatingTag(keyDecisionMaker) == "-4" {

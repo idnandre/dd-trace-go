@@ -417,6 +417,8 @@ func Test_DDOpenTelemetryTracer(t *testing.T) {
 	span.End()
 
 	childSpanContext := span.SpanContext()
+	fmt.Printf("Test_DDOpenTelemetryTracer parentSpanContext.IsSampled(): %v\n", parentSpanContext.IsSampled())
+	fmt.Printf("Test_DDOpenTelemetryTracer childSpanContext.IsSampled(): %v\n", childSpanContext.IsSampled())
 	require.Equal(t, parentSpanContext.TraceID(), childSpanContext.TraceID())
 	require.True(t, childSpanContext.IsSampled(), "parent span is sampled, but child span is not sampled") // this test fails
 }

@@ -29,6 +29,7 @@ import (
 	"github.com/DataDog/dd-trace-go/v2/internal/orchestrion"
 	"github.com/DataDog/dd-trace-go/v2/internal/samplernames"
 	"github.com/DataDog/dd-trace-go/v2/internal/traceprof"
+	"github.com/davecgh/go-spew/spew"
 
 	"github.com/tinylib/msgp/msgp"
 	"golang.org/x/xerrors"
@@ -662,9 +663,13 @@ func (s *Span) Finish(opts ...FinishOption) {
 	}
 
 	if s.Root() == s {
+		fmt.Println("s.Root() == s")
 		if tr, ok := getGlobalTracer().(*tracer); ok && tr.rulesSampling.traces.enabled() {
 			if !s.context.trace.isLocked() && s.context.trace.propagatingTag(keyDecisionMaker) != "-4" {
+				fmt.Println("BEFORE s.context.SamplingPriority()", spew.Sdump(s.context.SamplingPriority()))
 				tr.rulesSampling.SampleTrace(s)
+				fmt.Println("AFTER s.context.SamplingPriority()", spew.Sdump(s.context.SamplingPriority()))
+				fmt.Println("tr.rulesSampling.SampleTrace(s)")
 			}
 		}
 	}

@@ -8,6 +8,7 @@ package opentelemetry
 import (
 	"encoding/binary"
 	"errors"
+	"fmt"
 	"strconv"
 	"strings"
 	"sync"
@@ -16,6 +17,7 @@ import (
 	"github.com/DataDog/dd-trace-go/v2/ddtrace/ext"
 	"github.com/DataDog/dd-trace-go/v2/ddtrace/tracer"
 	"github.com/DataDog/dd-trace-go/v2/internal/log"
+	"github.com/davecgh/go-spew/spew"
 
 	"go.opentelemetry.io/otel/attribute"
 	otelcodes "go.opentelemetry.io/otel/codes"
@@ -119,6 +121,8 @@ func EndOptions(sp oteltrace.Span, options ...tracer.FinishOption) {
 // SpanContext returns implementation of the oteltrace.SpanContext.
 func (s *span) SpanContext() oteltrace.SpanContext {
 	ctx := s.DD.Context()
+	fmt.Println("SpanContext ctx", ctx)
+	fmt.Printf("SpanContext ctx.SamplingPriority(): %v\n", spew.Sdump(ctx.SamplingPriority()))
 	var traceID oteltrace.TraceID
 	var spanID oteltrace.SpanID
 	traceID = ctx.TraceIDBytes()
@@ -133,6 +137,10 @@ func (s *span) SpanContext() oteltrace.SpanContext {
 
 func (s *span) extractTraceData(c *oteltrace.SpanContextConfig) {
 	headers := tracer.TextMapCarrier{}
+	fmt.Printf("extractTraceData OHOHOHHOHOHO\n")
+	fmt.Printf("extractTraceData s.DD.Context(): %v\n", spew.Sdump(s.DD.Context().SamplingPriority()))
+	fmt.Println("ctx", s.DD.Context())
+
 	if err := tracer.Inject(s.DD.Context(), headers); err != nil {
 		return
 	}
@@ -143,19 +151,24 @@ func (s *span) extractTraceData(c *oteltrace.SpanContextConfig) {
 	}
 	c.TraceState = state
 	parent := strings.Trim(headers["traceparent"], " \t-")
+	spew.Dump(parent)
 	if len(parent) > 3 {
 		// checking the length to avoid panic when parsing
 		// The format of the traceparent is `-` separated string,
 		// where flags represents the propagated flags in the format of 2 hex-encoded digits at the end of the traceparent.
 		otelFlagLen := 2
 		if f, err := strconv.ParseUint(parent[len(parent)-otelFlagLen:], 16, 8); err != nil {
+			fmt.Printf("extractTraceData err: %v\n", err)
 			log.Debug("Couldn't parse traceparent: %v", err)
 		} else {
+			fmt.Printf("extractTraceData f: %v\n", f)
 			c.TraceFlags = oteltrace.TraceFlags(f)
 		}
 	}
 	// Remote indicates a remotely-created Span
 	c.Remote = true
+
+	spew.Dump(c)
 }
 
 func uint64ToByte(n uint64, b []byte) {

@@ -9,12 +9,14 @@ import (
 	"context"
 	"encoding/binary"
 	"encoding/hex"
+	"fmt"
 
 	"github.com/DataDog/dd-trace-go/v2/ddtrace/baggage"
 	"github.com/DataDog/dd-trace-go/v2/ddtrace/ext"
 	"github.com/DataDog/dd-trace-go/v2/ddtrace/tracer"
 	"github.com/DataDog/dd-trace-go/v2/internal/telemetry"
 	"github.com/DataDog/dd-trace-go/v2/internal/telemetry/log"
+	"github.com/davecgh/go-spew/spew"
 
 	otelbaggage "go.opentelemetry.io/otel/baggage"
 	oteltrace "go.opentelemetry.io/otel/trace"
@@ -43,7 +45,7 @@ func (t *oteltracer) Start(ctx context.Context, spanName string, opts ...oteltra
 		} else if sctx := oteltrace.SpanFromContext(ctx).SpanContext(); sctx.IsValid() {
 			// if the span doesn't originate from the Datadog tracer,
 			// use SpanContextW3C implementation struct to pass span context information
-			ddopts = append(ddopts, tracer.ChildOf(tracer.FromGenericCtx(otelToDDSpanContext(sctx))))
+			ddopts = append(ddopts, tracer.ChildOf(otelToDDSpanContext(sctx)))
 		}
 	}
 	if t := ssConfig.Timestamp(); !t.IsZero() {
@@ -95,13 +97,16 @@ func (t *oteltracer) Start(ctx context.Context, spanName string, opts ...oteltra
 	// we have to record the attributes  locally.
 	// The span operation name will be calculated when it's ended.
 	s := tracer.StartSpan(spanName, ddopts...)
-
+	fmt.Println("ctx", s.Context())
+	fmt.Printf("tracer.StartSpan after start  s.Context().SamplingPriority(): %v\n", spew.Sdump(s.Context().SamplingPriority()))
 	// Merge baggage from otel and dd, update Datadog baggage, and update the context.
 	mergedBag := mergeBaggageFromContext(ctx)
 	for _, m := range mergedBag.Members() {
 		ctx = baggage.Set(ctx, m.Key(), m.Value())
 	}
+	fmt.Println("ctx", s.Context())
 	ctx = otelbaggage.ContextWithBaggage(ctx, mergedBag)
+	fmt.Println("ctx", s.Context())
 
 	os := oteltrace.Span(&span{
 		DD:         s,
@@ -109,10 +114,12 @@ func (t *oteltracer) Start(ctx context.Context, spanName string, opts ...oteltra
 		spanKind:   ssConfig.SpanKind(),
 		attributes: cfg.Tags,
 	})
+
 	// Erase the start span options from the context to prevent them from being propagated to children
 	ctx = context.WithValue(ctx, startOptsKey, nil)
 	// Wrap the span in OpenTelemetry and Datadog contexts to propagate span context values
 	ctx = oteltrace.ContextWithSpan(tracer.ContextWithSpan(ctx, s), os)
+	fmt.Println("ctx", s.Context())
 	return ctx, os
 }
 
@@ -181,9 +188,13 @@ func otelToDDSpanContext(otelCtx oteltrace.SpanContext) *tracer.SpanContext {
 	} else {
 		samplingPriority = nil
 	}
+
+	fmt.Printf("otelToDDSpanContext otelCtx.IsSampled(): %v\n", otelCtx.IsSampled())
 	// Traceflags??
 	sc := tracer.NewSpanContextFromFields(traceID, spanID, samplingPriority, nil)
 	tracer.ParseTracestate(sc, otelCtx.TraceState().String())
+
+	fmt.Printf("otelToDDSpanContext sc.SamplingPriority(): %v\n", spew.Sdump(sc.SamplingPriority()))
 
 	return sc
 }
