@@ -739,6 +739,7 @@ github.com/BurntSushi/toml v1.4.0/go.mod h1:ukJfTF/6rtPPRCnwkur4qwRxa8vTRFBF0uk2
 github.com/BurntSushi/toml v1.5.0/go.mod h1:ukJfTF/6rtPPRCnwkur4qwRxa8vTRFBF0uk2lLoLwho=
 github.com/BurntSushi/xgb v0.0.0-20160522181843-27f122750802 h1:1BDTz0u9nC3//pOCMdNH+CiXJVYJh5UQNCOBG7jbELc=
 github.com/DataDog/appsec-internal-go v1.9.0/go.mod h1:wW0cRfWBo4C044jHGwYiyh5moQV2x0AhnwqMuiX7O/g=
+github.com/DataDog/datadog-agent/comp/trace/compression/def v0.61.0/go.mod h1:samFXdP0HVSwD223LPLzcPKUjRQ6/uwr/1wMPo2HhRg=
 github.com/DataDog/datadog-agent/comp/trace/compression/def v0.64.2 h1:RKzJe4B8yQLZ5iC4tidfakKWQnFAeMCgoxJYXPsqQbo=
 github.com/DataDog/datadog-agent/comp/trace/compression/def v0.64.2/go.mod h1:+BnlaBR5kMqTFYwDEc1QW0f6zvLJKnwBAUbeC68HaVs=
 github.com/DataDog/datadog-agent/comp/trace/compression/def v0.66.0 h1:9thJ4Lsy7S197UV+gz0N93T3X8dUTim7PoWpv86fFlU=
@@ -747,6 +748,7 @@ github.com/DataDog/datadog-agent/comp/trace/compression/def v0.66.1 h1:KO8z2vXbc
 github.com/DataDog/datadog-agent/comp/trace/compression/def v0.66.1/go.mod h1:Qu4Bl0erCFLwvSqym/PWo3eLZiSSMdPodjII9JGSwPY=
 github.com/DataDog/datadog-agent/comp/trace/compression/def v0.67.0 h1:GWSMSu8xQ91w8vIOkdTl2e1Q/qGhPcilYSIUsJWJIqg=
 github.com/DataDog/datadog-agent/comp/trace/compression/def v0.67.0/go.mod h1:rkn9RaUfhFr64p9zF0HIaiT32e6Or76pjHJJg9fglq0=
+github.com/DataDog/datadog-agent/comp/trace/compression/impl-gzip v0.61.0/go.mod h1:PxmP25AdAoNttl2qduGev+SsWCosLgc+lDyYp+Hds10=
 github.com/DataDog/datadog-agent/comp/trace/compression/impl-gzip v0.64.2 h1:VC9oiyjcjuBHfxWZcXXc1fwBygLXO33GzfbZeWNPBOY=
 github.com/DataDog/datadog-agent/comp/trace/compression/impl-gzip v0.64.2/go.mod h1:viv8Bvx5BE2YDnsWwemlGu6dsaT6tjBoK27eMXkvdeY=
 github.com/DataDog/datadog-agent/comp/trace/compression/impl-gzip v0.66.0 h1:RfxP4lkAbjmc8SUuU25mfvp12c+ETPc5qKg3zopnu5s=
@@ -755,6 +757,7 @@ github.com/DataDog/datadog-agent/comp/trace/compression/impl-gzip v0.66.1 h1:2Xy
 github.com/DataDog/datadog-agent/comp/trace/compression/impl-gzip v0.66.1/go.mod h1:q07TPvUbBOsRWZfVrnh/ivBbUzMczFjWe8u4mWRvHEA=
 github.com/DataDog/datadog-agent/comp/trace/compression/impl-gzip v0.67.0 h1:FDBCbHbTtwGpfHL7RI0xl7lnDPVV6e5rz7mxCEJtWHY=
 github.com/DataDog/datadog-agent/comp/trace/compression/impl-gzip v0.67.0/go.mod h1:zqTLA1qsVGO9u3Ajn0UDeVBCxXPV9Kw6xmqSPMI1rtg=
+github.com/DataDog/datadog-agent/comp/trace/compression/impl-zstd v0.56.0-rc.3/go.mod h1:TOlu5v8b46+aW9h3KLZdOiwz3gJkoQerT3+F3st6ZRA=
 github.com/DataDog/datadog-agent/comp/trace/compression/impl-zstd v0.64.2 h1:58UNufA8lcUb/0ggQAj6mzKxcTxuYVf71PQcrx+izHg=
 github.com/DataDog/datadog-agent/comp/trace/compression/impl-zstd v0.64.2/go.mod h1:X97j3rl2QnoOXanM23Qw1Esmz+bx+tu2ODnbZPdzzoc=
 github.com/DataDog/datadog-agent/comp/trace/compression/impl-zstd v0.66.0 h1:/TN9im/UI/GWKPFC4O13Su9x3JlwtlgU0o8cFFbAeF4=
@@ -769,6 +772,7 @@ github.com/DataDog/datadog-agent/pkg/template v0.66.1 h1:IY5BDczv1dOSdCsiD9HU84R
 github.com/DataDog/datadog-agent/pkg/template v0.66.1/go.mod h1:uZEMDpntZpvc2SWQWgZTpwCRM8m9FMfWx471/5zjZBU=
 github.com/DataDog/datadog-agent/pkg/template v0.67.0 h1:oeeFkLzU31vNvk/pc1SfA2oYvOAlBzWWRzRrbHFPhwY=
 github.com/DataDog/datadog-agent/pkg/template v0.67.0/go.mod h1:uZEMDpntZpvc2SWQWgZTpwCRM8m9FMfWx471/5zjZBU=
+github.com/DataDog/datadog-agent/pkg/util/cgroups v0.61.0/go.mod h1:Ysxwnjug+Y7H0Hc8zk4Ytk0WeuoVfP62IczAi3BTzBA=
 github.com/DataDog/datadog-agent/pkg/util/cgroups v0.64.2 h1:oIXXiS3AECT6JwyJsmbWN9P5ku57fogLkUDeka6uYl4=
 github.com/DataDog/datadog-agent/pkg/util/cgroups v0.64.2/go.mod h1:ag/+5g879n3WZpcPr8yW7X4Lf83l3yz8qTsoeM1U7Qo=
 github.com/DataDog/datadog-agent/pkg/util/cgroups v0.66.0 h1:XYfPhu2zbvM00ocogjsGZ6cgYdNyj5v/QmQemRczKeo=
@@ -777,6 +781,7 @@ github.com/DataDog/datadog-agent/pkg/util/cgroups v0.66.1 h1:9XTsASaD0IEXCrhIU9C
 github.com/DataDog/datadog-agent/pkg/util/cgroups v0.66.1/go.mod h1:QpmGPKiB2o2hVyPcaz1aO2Ug1wcgTBNdc9pXMGXLZQA=
 github.com/DataDog/datadog-agent/pkg/util/cgroups v0.67.0 h1:4zdK63EX8IEumz1G3lWLaAoDcuyc+E26zIHED6HtVS0=
 github.com/DataDog/datadog-agent/pkg/util/cgroups v0.67.0/go.mod h1:vuQxQRg6890W8LC2lDyRASCTb5sIA3hzwdouhp2LB4E=
+github.com/DataDog/datadog-agent/pkg/util/pointer v0.61.0/go.mod h1:t1DlnUEMltkvwPLc7zCtP1u5cBDu+30daR2VhQO5bvA=
 github.com/DataDog/datadog-agent/pkg/util/pointer v0.64.2 h1:riYWM572c2zVBK6yMg1i2XfmGhmDtooM9+WXBGNXtHk=
 github.com/DataDog/datadog-agent/pkg/util/pointer v0.64.2/go.mod h1:cY4100zn21kBb748mG0hDv9BfswD+tUw3p2M4XdUzAE=
 github.com/DataDog/datadog-agent/pkg/util/pointer v0.66.0 h1:8fVvmbjBUL1wZeNvLIaolE1eNg4EVP12w4Whkd6AkT4=
@@ -1113,6 +1118,7 @@ github.com/cpuguy83/go-md2man/v2 v2.0.0/go.mod h1:maD7wRr/U5Z6m/iR4s+kqSMx2CaBsr
 github.com/cpuguy83/go-md2man/v2 v2.0.2/go.mod h1:tgQtvFlXSQOSOSIRvRPT7W67SCa46tRHOmNcaadrF8o=
 github.com/cpuguy83/go-md2man/v2 v2.0.4/go.mod h1:tgQtvFlXSQOSOSIRvRPT7W67SCa46tRHOmNcaadrF8o=
 github.com/cpuguy83/go-md2man/v2 v2.0.5/go.mod h1:tgQtvFlXSQOSOSIRvRPT7W67SCa46tRHOmNcaadrF8o=
+github.com/cpuguy83/go-md2man/v2 v2.0.6/go.mod h1:oOW0eioCTA6cOiMLiUPZOpcVxMig6NIQQ7OS05n1F4g=
 github.com/creack/pty v1.1.7/go.mod h1:lj5s0c3V2DBrqTV7llrYr5NG6My20zk30Fl46Y7DoTY=
 github.com/creack/pty v1.1.11/go.mod h1:oKZEueFk5CKHvIhNR5MUki03XCEU+Q6VDXinZuGJ33E=
 github.com/cyphar/filepath-securejoin v0.2.2/go.mod h1:FpkQEhXnPnOthhzymB7CGsFk2G9VLXONKD9G7QGMM+4=
@@ -1729,6 +1735,7 @@ github.com/prometheus/common v0.10.0/go.mod h1:Tlit/dnDKsSWFlCLTWaA1cyBgKHSMdTB8
 github.com/prometheus/common v0.26.0/go.mod h1:M7rCNAaPfAosfx8veZJCuw84e35h3Cfd9VFqTh1DIvc=
 github.com/prometheus/common v0.32.1/go.mod h1:vu+V0TpY+O6vW9J44gczi3Ap/oXXR10b+M/gUGO4Hls=
 github.com/prometheus/common v0.37.0/go.mod h1:phzohg0JFMnBEFGxTDbfu3QyL5GI8gTQJFhYO5B3mfA=
+github.com/prometheus/common v0.55.0/go.mod h1:2SECS4xJG1kd8XF9IcM1gMX6510RAEL65zxzNImwdc8=
 github.com/prometheus/procfs v0.0.0-20180125133057-cb4147076ac7/go.mod h1:c3At6R/oaqEKCNdg8wHV1ftS6bRYblBhIjjI8uT2IGk=
 github.com/prometheus/procfs v0.0.0-20190522114515-bc1a522cf7b1/go.mod h1:TjEm7ze935MbeOT/UhFTIMYKhuLP4wbCsTZCD3I8kEA=
 github.com/prometheus/procfs v0.0.3/go.mod h1:4A/X28fw3Fc593LaREMrKMqOKvUAntwMDaekg4FpcdQ=
@@ -1917,7 +1924,6 @@ go.mozilla.org/pkcs7 v0.0.0-20200128120323-432b2356ecb1 h1:A/5uWzF44DlIgdm/PQFwf
 go.mozilla.org/pkcs7 v0.0.0-20200128120323-432b2356ecb1/go.mod h1:SNgMg+EgDFwmvSmLRTNKC5fegJjB7v23qTQ0XLGUNHk=
 go.opentelemetry.io/collector/component v1.29.0/go.mod h1:qHoiz0iyBgyAYsT0F8FgtcJv8pTEQDvo1Ox3eO3qVlY=
 go.opentelemetry.io/collector/component v1.32.0/go.mod h1:r2gxdx07gNVbsdH1ypt43W/hWAEgP2ti1eAYnrT6j7s=
-go.opentelemetry.io/collector/component v1.35.0/go.mod h1:hU/ieWPxWbMAacODCSqem5ZaN6QH9W5GWiZ3MtXVuwc=
 go.opentelemetry.io/collector/component/componenttest v0.123.0/go.mod h1:4Y6EMvsgE9fUNM98G0eW5+LFXfcxdhTHQDhaOxJrgN8=
 go.opentelemetry.io/collector/config/configtelemetry v0.120.0 h1:YPXMpfMd9PhngFXiwi3Lmze/Rs0nGS5wQOX16Elev+8=
 go.opentelemetry.io/collector/config/configtelemetry v0.120.0/go.mod h1:WXmlNatI0vwjv7whh/qF1Xy+UufCZDk7VLtYqML7QmA=
@@ -2027,7 +2033,6 @@ go.opentelemetry.io/collector/featuregate v1.28.0 h1:nkaMw0HyOSxojLwlezF2O/xJ9T/
 go.opentelemetry.io/collector/featuregate v1.28.0/go.mod h1:Y/KsHbvREENKvvN9RlpiWk/IGBK+CATBYzIIpU7nccc=
 go.opentelemetry.io/collector/featuregate v1.29.0/go.mod h1:Y/KsHbvREENKvvN9RlpiWk/IGBK+CATBYzIIpU7nccc=
 go.opentelemetry.io/collector/featuregate v1.32.0/go.mod h1:Y/KsHbvREENKvvN9RlpiWk/IGBK+CATBYzIIpU7nccc=
-go.opentelemetry.io/collector/featuregate v1.35.0/go.mod h1:Y/KsHbvREENKvvN9RlpiWk/IGBK+CATBYzIIpU7nccc=
 go.opentelemetry.io/collector/internal/fanoutconsumer v0.120.0 h1:vcY46z2WnYs0bcFulJX51O2dXc2sgWDymR91u/tV5EE=
 go.opentelemetry.io/collector/internal/fanoutconsumer v0.120.0/go.mod h1:qUcJqy4Us/pxnWJTqloDmlAz8wGUIZDe/RMSmzfymdo=
 go.opentelemetry.io/collector/internal/fanoutconsumer v0.122.0 h1:Oup8r2FaIEi7si3Kz7ybSgeNh6TrQFNJ9I7bNNdgJ0o=
@@ -2040,7 +2045,6 @@ go.opentelemetry.io/collector/internal/telemetry v0.122.0 h1:5RCl/CdT3+VaduRI5Ip
 go.opentelemetry.io/collector/internal/telemetry v0.122.0/go.mod h1:FrmVXPmQMn3BuGIWg/pOdmHTMvXmlNzcbMusn8SSZn4=
 go.opentelemetry.io/collector/internal/telemetry v0.123.0/go.mod h1:Qwh5XcqAlAT9NorjaaSaNcilDgaecs8S+OKljJ9hFno=
 go.opentelemetry.io/collector/internal/telemetry v0.126.0/go.mod h1:7MqIwRTPLKH5LySJpo5nZmbX9AmfCUp34F6KSB2C94g=
-go.opentelemetry.io/collector/internal/telemetry v0.129.0/go.mod h1:riAPlR2LZBV7VEx4LicOKebg3N1Ja3izzkv5fl1Lhiw=
 go.opentelemetry.io/collector/otelcol v0.120.0 h1:iCUzunaztU69MlA+fe1/5VLIuufAFo53psghgaEdamo=
 go.opentelemetry.io/collector/otelcol v0.120.0/go.mod h1:nNELe3quKRa4Ra3zTsCOkC7IXii0Z2E2wureB1SW1OA=
 go.opentelemetry.io/collector/otelcol v0.122.0 h1:Uq8MKHHAAdgPs1VhHtoAYC6Wuxom1Dd8TaoOnIc7vWQ=
@@ -2055,7 +2059,6 @@ go.opentelemetry.io/collector/otelcol/otelcoltest v0.125.0 h1:GYgwOoLKhBl64ndua+
 go.opentelemetry.io/collector/otelcol/otelcoltest v0.125.0/go.mod h1:xadhCU4sDwga7XSOQVMyCOA5Yi7aeZ0/DSb+m+eWK+0=
 go.opentelemetry.io/collector/pdata v1.29.0/go.mod h1:9kb3zMtLFXBPA6WGWkBHbkFwlwwYL/OHk1m0ASWZpeY=
 go.opentelemetry.io/collector/pdata v1.32.0/go.mod h1:m41io9nWpy7aCm/uD1L9QcKiZwOP0ldj83JEA34dmlk=
-go.opentelemetry.io/collector/pdata v1.35.0/go.mod h1:pttpb089864qG1k0DMeXLgwwTFLk+o3fAW9I6MF9tzw=
 go.opentelemetry.io/collector/pipeline/xpipeline v0.120.0 h1:klY22BaRMO1+JmjUu0Af961hpHA5qnOTAVR7tN+UTW8=
 go.opentelemetry.io/collector/pipeline/xpipeline v0.120.0/go.mod h1:K/7Ki7toZQpNV0GF7TbrOEoo8dP3dDXKKSRNnTyEsBE=
 go.opentelemetry.io/collector/pipeline/xpipeline v0.122.0 h1:Zu6zvO/6epvsjZ74t7qAiMowqhScxHZURlBzBaJ00iY=
@@ -2096,7 +2099,6 @@ go.opentelemetry.io/contrib v0.20.0 h1:ubFQUn0VCZ0gPwIoJfBJVpeBlyRMxu8Mm/huKWYd9
 go.opentelemetry.io/contrib v0.20.0/go.mod h1:G/EtFaa6qaN7+LxqfIAT3GiZa7Wv5DTBUzl5H4LY0Kc=
 go.opentelemetry.io/contrib/bridges/otelzap v0.9.0 h1:f+xpAfhQTjR8beiSMe1bnT/25PkeyWmOcI+SjXWguNw=
 go.opentelemetry.io/contrib/bridges/otelzap v0.9.0/go.mod h1:T1Z1jyS5FttgQoF6UcGhnM+gF9wU32B4lHO69nXw4FE=
-go.opentelemetry.io/contrib/bridges/otelzap v0.11.0/go.mod h1:pJPCLM8gzX4ASqLlyAXjHBEYxgbOQJ/9bidWxD6PEPQ=
 go.opentelemetry.io/contrib/config v0.14.0 h1:QAG8uHNp5ZiCkpT7XggSmg5AyW1sA0LgypMoXgBB1+4=
 go.opentelemetry.io/contrib/config v0.14.0/go.mod h1:77rDmFPqBae5jtQ2C78RuDTHz4P27C8LzoN0MZyumYQ=
 go.opentelemetry.io/contrib/detectors/gcp v1.32.0 h1:P78qWqkLSShicHmAzfECaTgvslqHxblNE9j62Ws1NK8=
@@ -2184,7 +2186,6 @@ go.opentelemetry.io/otel/exporters/stdout/stdouttrace v1.35.0 h1:T0Ec2E+3YZf5bgT
 go.opentelemetry.io/otel/exporters/stdout/stdouttrace v1.35.0/go.mod h1:30v2gqH+vYGJsesLWFov8u47EpYTcIQcBjKpI6pJThg=
 go.opentelemetry.io/otel/log v0.10.0 h1:1CXmspaRITvFcjA4kyVszuG4HjA61fPDxMb7q3BuyF0=
 go.opentelemetry.io/otel/log v0.10.0/go.mod h1:PbVdm9bXKku/gL0oFfUF4wwsQsOPlpo4VEqjvxih+FM=
-go.opentelemetry.io/otel/log v0.12.2/go.mod h1:ShIItIxSYxufUMt+1H5a2wbckGli3/iCfuEbVZi/98E=
 go.opentelemetry.io/otel/metric v0.31.0/go.mod h1:ohmwj9KTSIeBnDBm/ZwH2PSZxZzoOaG2xZeekTRzL5A=
 go.opentelemetry.io/otel/metric v1.19.0/go.mod h1:L5rUsV9kM1IxCj1MmSdS+JQAcVm319EUrDVLrt7jqt8=
 go.opentelemetry.io/otel/metric v1.21.0/go.mod h1:o1p3CA8nNHW8j5yuQLdc1eeqEaPfzug24uvsyIEJRWM=
@@ -2205,7 +2206,6 @@ go.opentelemetry.io/otel/sdk/log v0.10.0 h1:lR4teQGWfeDVGoute6l0Ou+RpFqQ9vaPdrNJ
 go.opentelemetry.io/otel/sdk/log v0.10.0/go.mod h1:A+V1UTWREhWAittaQEG4bYm4gAZa6xnvVu+xKrIRkzo=
 go.opentelemetry.io/otel/sdk/log v0.11.0 h1:7bAOpjpGglWhdEzP8z0VXc4jObOiDEwr3IYbhBnjk2c=
 go.opentelemetry.io/otel/sdk/log v0.11.0/go.mod h1:dndLTxZbwBstZoqsJB3kGsRPkpAgaJrWfQg3lhlHFFY=
-go.opentelemetry.io/otel/sdk/metric v1.36.0/go.mod h1:qTNOhFDfKRwX0yXOqJYegL5WRaW376QbB7P4Pb0qva4=
 go.opentelemetry.io/otel/trace v1.0.1/go.mod h1:5g4i4fKLaX2BQpSBsxw8YYcgKpMMSW3x7ZTuYBr3sUk=
 go.opentelemetry.io/otel/trace v1.10.0/go.mod h1:Sij3YYczqAdz+EhmGhE6TpTxUO5/F/AzrK+kxfGqySM=
 go.opentelemetry.io/otel/trace v1.19.0/go.mod h1:mfaSyvGyEJEI0nyV2I4qhNQnbBOUUmYZpYojqMnX2vo=
@@ -2243,6 +2243,9 @@ go.uber.org/zap v1.10.0/go.mod h1:vwi/ZaCAaUcBkycHslxD9B2zi4UTXhF60s6SWpuDF0Q=
 go.uber.org/zap v1.13.0/go.mod h1:zwrFLgMcdUuIBviXEYEH1YKNaOBnKXsx2IPda5bBwHM=
 go.uber.org/zap v1.17.0/go.mod h1:MXVU+bhUf/A7Xi2HNOnopQOrmycQ5Ih87HtOu4q5SSo=
 go.uber.org/zap v1.19.0/go.mod h1:xg/QME4nWcxGxrpdeYfq7UvYrLh66cuVKdrbD1XF/NI=
+go.yaml.in/yaml/v2 v2.4.2 h1:DzmwEr2rDGHl7lsFgAHxmNz/1NlQ7xLIrlN2h5d1eGI=
+go.yaml.in/yaml/v2 v2.4.2/go.mod h1:081UH+NErpNdqlCXm3TtEran0rJZGxAYx9hb/ELlsPU=
+go.yaml.in/yaml/v3 v3.0.3/go.mod h1:tBHosrYAkRZjRAOREWbDnBXUf08JOwYq++0QNwQiWzI=
 golang.org/x/arch v0.0.0-20210923205945-b76863e36670/go.mod h1:5om86z9Hs0C8fWVUuoMHwpExlXzs5Tkyp9hOrfG7pp8=
 golang.org/x/arch v0.8.0/go.mod h1:FEVrYAQjsQXMVJ1nsMoVVXPZg6p2JE2mx8psSWTDQys=
 golang.org/x/crypto v0.0.0-20171113213409-9f005a07e0d3/go.mod h1:6SG95UA2DQfeDnfUPMdvaQW0Q7yPrPDi9nlGo2tz2b4=
@@ -2367,6 +2370,7 @@ golang.org/x/sys v0.30.0/go.mod h1:/VUhepiaJMQUp4+oa/7Zr1D23ma6VTLIYjOOTFZPUcA=
 golang.org/x/sys v0.31.0/go.mod h1:BJP2sWEmIv4KK5OTEluFJCKSidICx8ciO85XgH3Ak8k=
 golang.org/x/telemetry v0.0.0-20240521205824-bda55230c457 h1:zf5N6UOrA487eEFacMePxjXAJctxKmyjKUsjA11Uzuk=
 golang.org/x/telemetry v0.0.0-20240521205824-bda55230c457/go.mod h1:pRgIJT+bRLFKnoM1ldnzKoxTIn14Yxz928LQRYYgIN0=
+golang.org/x/telemetry v0.0.0-20250710130107-8d8967aff50b h1:DU+gwOBXU+6bO0sEyO7o/NeMlxZxCZEvI7v+J4a1zRQ=
 golang.org/x/telemetry v0.0.0-20250710130107-8d8967aff50b/go.mod h1:4ZwOYna0/zsOKwuR5X/m0QFOJpSZvAxFfkQT+Erd9D4=
 golang.org/x/term v0.0.0-20201117132131-f5c789dd3221/go.mod h1:Nr5EML6q2oocZ2LXRh80K7BxOlk5/8JxuGnuhpl+muw=
 golang.org/x/term v0.25.0/go.mod h1:RPyXicDX+6vLxogjjRxjgD2TKtmAO6NZBsBRfrOLu7M=
@@ -2641,6 +2645,8 @@ sigs.k8s.io/randfill v0.0.0-20250304075658-069ef1bbf016 h1:kXv6kKdoEtedwuqMmkqhb
 sigs.k8s.io/structured-merge-diff/v4 v4.0.2/go.mod h1:bJZC9H9iH24zzfZ/41RGcq60oK1F7G282QMXDPYydCw=
 sigs.k8s.io/yaml v1.1.0/go.mod h1:UJmg0vDUVViEyp3mgSv9WPwZCDxu4rQW1olrI1uml+o=
 sigs.k8s.io/yaml v1.2.0/go.mod h1:yfXDCHCao9+ENCvLSE62v9VSji2MKu5jeNfTrofGhJc=
+sigs.k8s.io/yaml v1.5.0 h1:M10b2U7aEUY6hRtU870n2VTPgR5RZiL/I6Lcc2F4NUQ=
+sigs.k8s.io/yaml v1.5.0/go.mod h1:wZs27Rbxoai4C0f8/9urLZtZtF3avA3gKvGyPdDqTO4=
 tags.cncf.io/container-device-interface/specs-go v0.7.0 h1:w/maMGVeLP6TIQJVYT5pbqTi8SCw/iHZ+n4ignuGHqg=
 tags.cncf.io/container-device-interface/specs-go v0.7.0/go.mod h1:hMAwAbMZyBLdmYqWgYcKH0F/yctNpV3P35f+/088A80=
 tags.cncf.io/container-device-interface/specs-go v0.8.0 h1:QYGFzGxvYK/ZLMrjhvY0RjpUavIn4KcmRmVP/JjdBTA=
