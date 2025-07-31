@@ -4,12 +4,12 @@ go 1.23.0
 
 godebug x509negativeserial=1
 
-replace github.com/DataDog/datadog-agent/pkg/trace => github.com/DataDog/datadog-agent/pkg/trace v0.70.0-devel.0.20250730124439-b7e00f96986b
+replace github.com/DataDog/datadog-agent/pkg/trace => github.com/DataDog/datadog-agent/pkg/trace v0.70.0-devel.0.20250730155552-963329a8c204
 
 require (
 	github.com/DataDog/appsec-internal-go v1.13.0
 	github.com/DataDog/datadog-agent/pkg/obfuscate v0.67.0
-	github.com/DataDog/datadog-agent/pkg/proto v0.70.0-devel.0.20250730124439-b7e00f96986b
+	github.com/DataDog/datadog-agent/pkg/proto v0.70.0-devel.0.20250730155552-963329a8c204
 	github.com/DataDog/datadog-agent/pkg/remoteconfig/state v0.67.0
 	github.com/DataDog/datadog-agent/pkg/trace v0.67.0
 	github.com/DataDog/datadog-go/v5 v5.6.0
@@ -45,10 +45,10 @@ require (
 )
 
 require (
-	github.com/DataDog/datadog-agent/comp/core/tagger/origindetection v0.70.0-devel.0.20250730124439-b7e00f96986b // indirect
-	github.com/DataDog/datadog-agent/pkg/util/log v0.70.0-devel.0.20250730124439-b7e00f96986b // indirect
-	github.com/DataDog/datadog-agent/pkg/util/scrubber v0.70.0-devel.0.20250730124439-b7e00f96986b // indirect
-	github.com/DataDog/datadog-agent/pkg/version v0.70.0-devel.0.20250730124439-b7e00f96986b // indirect
+	github.com/DataDog/datadog-agent/comp/core/tagger/origindetection v0.70.0-devel.0.20250730155552-963329a8c204 // indirect
+	github.com/DataDog/datadog-agent/pkg/util/log v0.70.0-devel.0.20250730155552-963329a8c204 // indirect
+	github.com/DataDog/datadog-agent/pkg/util/scrubber v0.70.0-devel.0.20250730155552-963329a8c204 // indirect
+	github.com/DataDog/datadog-agent/pkg/version v0.70.0-devel.0.20250730155552-963329a8c204 // indirect
 	github.com/DataDog/go-sqllexer v0.1.6 // indirect
 	github.com/DataDog/go-tuf v1.1.1-0.5.2 // indirect
 	github.com/DataDog/opentelemetry-mapping-go/pkg/otlp/attributes v0.29.0 // indirect
