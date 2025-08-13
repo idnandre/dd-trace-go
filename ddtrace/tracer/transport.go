@@ -116,12 +116,19 @@ func newHTTPTransport(url string, client *http.Client) *httpTransport {
 }
 
 func (t *httpTransport) sendStats(p *pb.ClientStatsPayload, tracerObfuscationVersion int) error {
+	for _, stat := range p.Stats {
+		for _, bcket := range stat.Stats {
+			fmt.Println("Sent statistics for", bcket.Name, "with http method", bcket.HTTPMethod, "and endpoint", bcket.Endpoint)
+		}
+	}
+
 	var buf bytes.Buffer
 	if err := msgp.Encode(&buf, p); err != nil {
 		return err
 	}
 	req, err := http.NewRequest("POST", t.statsURL, &buf)
 	if err != nil {
+		fmt.Println("Error creating HTTP request:", err)
 		return err
 	}
 	for header, value := range t.headers {
@@ -132,9 +139,11 @@ func (t *httpTransport) sendStats(p *pb.ClientStatsPayload, tracerObfuscationVer
 	}
 	resp, err := t.client.Do(req)
 	if err != nil {
+		fmt.Println("Error sending stats:", err)
 		return err
 	}
 	if code := resp.StatusCode; code >= 400 {
+		fmt.Println("Error sending stats (2):", resp.Status)
 		// error, check the body for context information and
 		// return a nice error.
 		msg := make([]byte, 1000)
