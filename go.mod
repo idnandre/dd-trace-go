@@ -4,7 +4,7 @@ go 1.23.0
 
 godebug x509negativeserial=1
 
-replace github.com/DataDog/datadog-agent/pkg/trace => github.com/DataDog/datadog-agent/pkg/trace v0.70.0-devel.0.20250807144958-1e163986a296
+replace github.com/DataDog/datadog-agent/pkg/trace => github.com/DataDog/datadog-agent/pkg/trace v0.70.0-devel.0.20250818095126-7ad3105d921c
 
 replace github.com/DataDog/datadog-agent/pkg/template => github.com/DataDog/datadog-agent/pkg/template v0.66.0
 
@@ -13,7 +13,7 @@ replace github.com/DataDog/datadog-agent/pkg/api => github.com/DataDog/datadog-a
 require (
 	github.com/DataDog/appsec-internal-go v1.13.0
 	github.com/DataDog/datadog-agent/pkg/obfuscate v0.67.0
-	github.com/DataDog/datadog-agent/pkg/proto v0.70.0-devel.0.20250807144958-1e163986a296
+	github.com/DataDog/datadog-agent/pkg/proto v0.70.0-devel.0.20250818095126-7ad3105d921c
 	github.com/DataDog/datadog-agent/pkg/remoteconfig/state v0.67.0
 	github.com/DataDog/datadog-agent/pkg/trace v0.67.0
 	github.com/DataDog/datadog-go/v5 v5.6.0
@@ -49,10 +49,10 @@ require (
 )
 
 require (
-	github.com/DataDog/datadog-agent/comp/core/tagger/origindetection v0.70.0-devel.0.20250807144958-1e163986a296 // indirect
-	github.com/DataDog/datadog-agent/pkg/util/log v0.70.0-devel.0.20250807144958-1e163986a296 // indirect
-	github.com/DataDog/datadog-agent/pkg/util/scrubber v0.70.0-devel.0.20250807144958-1e163986a296 // indirect
-	github.com/DataDog/datadog-agent/pkg/version v0.70.0-devel.0.20250807144958-1e163986a296 // indirect
+	github.com/DataDog/datadog-agent/comp/core/tagger/origindetection v0.70.0-devel.0.20250818095126-7ad3105d921c // indirect
+	github.com/DataDog/datadog-agent/pkg/util/log v0.70.0-devel.0.20250818095126-7ad3105d921c // indirect
+	github.com/DataDog/datadog-agent/pkg/util/scrubber v0.70.0-devel.0.20250818095126-7ad3105d921c // indirect
+	github.com/DataDog/datadog-agent/pkg/version v0.70.0-devel.0.20250818095126-7ad3105d921c // indirect
 	github.com/DataDog/go-sqllexer v0.1.6 // indirect
 	github.com/DataDog/go-tuf v1.1.1-0.5.2 // indirect
 	github.com/DataDog/opentelemetry-mapping-go/pkg/otlp/attributes v0.29.1 // indirect
