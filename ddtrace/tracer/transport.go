@@ -118,7 +118,7 @@ func newHTTPTransport(url string, client *http.Client) *httpTransport {
 func (t *httpTransport) sendStats(p *pb.ClientStatsPayload, tracerObfuscationVersion int) error {
 	for _, stat := range p.Stats {
 		for _, bcket := range stat.Stats {
-			fmt.Println("Sent statistics for", bcket.Name, "with http method", bcket.HTTPMethod, "and endpoint", bcket.Endpoint)
+			fmt.Println("Sent statistics for", bcket.Name, "with http method", bcket.HTTPMethod, "and endpoint", bcket.HTTPEndpoint)
 		}
 	}
 
