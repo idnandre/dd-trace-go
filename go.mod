@@ -1,6 +1,6 @@
 module github.com/DataDog/dd-trace-go/v2
 
-go 1.23.0
+go 1.24.0
 
 godebug x509negativeserial=1
 
@@ -10,16 +10,15 @@ require (
 	github.com/DataDog/appsec-internal-go v1.13.0
 	github.com/DataDog/datadog-agent/pkg/obfuscate v0.67.0
 	github.com/DataDog/datadog-agent/pkg/proto v0.67.0
-	github.com/DataDog/datadog-agent/pkg/remoteconfig/state v0.67.0
+	github.com/DataDog/datadog-agent/pkg/remoteconfig/state v0.69.0
 	github.com/DataDog/datadog-agent/pkg/trace v0.67.0
 	github.com/DataDog/datadog-go/v5 v5.6.0
-	github.com/DataDog/go-libddwaf/v4 v4.3.0
+	github.com/DataDog/go-libddwaf/v4 v4.3.2
 	github.com/DataDog/go-runtime-metrics-internal v0.0.4-0.20250721125240-fdf1ef85b633
 	github.com/DataDog/gostackparse v0.7.0
 	github.com/DataDog/sketches-go v1.4.7
 	github.com/Masterminds/semver/v3 v3.3.1
 	github.com/cihub/seelog v0.0.0-20170130134532-f561c5e57575
-	github.com/eapache/queue/v2 v2.0.0-20230407133247-75960ed334e4
 	github.com/go-viper/mapstructure/v2 v2.3.0
 	github.com/google/pprof v0.0.0-20241029153458-d1b30febd7db
 	github.com/google/uuid v1.6.0
@@ -30,6 +29,7 @@ require (
 	github.com/sasha-s/go-deadlock v0.3.5
 	github.com/spaolacci/murmur3 v1.1.0
 	github.com/stretchr/testify v1.10.0
+	github.com/theckman/httpforwarded v0.4.0
 	github.com/tinylib/msgp v1.2.5
 	github.com/trailofbits/go-mutexasserts v0.0.0-20250514102930-c1f3d2e37561
 	go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp v0.49.0
@@ -37,10 +37,10 @@ require (
 	go.opentelemetry.io/otel/trace v1.35.0
 	go.uber.org/goleak v1.3.0
 	golang.org/x/exp v0.0.0-20250408133849-7e4ce0ab07d0
-	golang.org/x/mod v0.24.0
+	golang.org/x/mod v0.25.0
 	golang.org/x/sys v0.33.0
 	golang.org/x/time v0.11.0
-	golang.org/x/tools v0.32.0
+	golang.org/x/tools v0.33.0
 	golang.org/x/xerrors v0.0.0-20231012003039-104605ab7028
 	google.golang.org/grpc v1.72.0
 	google.golang.org/protobuf v1.36.6
@@ -97,9 +97,9 @@ require (
 	go.uber.org/atomic v1.11.0 // indirect
 	go.uber.org/multierr v1.11.0 // indirect
 	go.uber.org/zap v1.27.0 // indirect
-	golang.org/x/net v0.39.0 // indirect
-	golang.org/x/sync v0.13.0 // indirect
-	golang.org/x/text v0.24.0 // indirect
+	golang.org/x/net v0.40.0 // indirect
+	golang.org/x/sync v0.15.0 // indirect
+	golang.org/x/text v0.26.0 // indirect
 	google.golang.org/genproto/googleapis/rpc v0.0.0-20250425173222-7b384671a197 // indirect
 	gopkg.in/ini.v1 v1.67.0 // indirect
 )

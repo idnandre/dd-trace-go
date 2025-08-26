@@ -28,6 +28,7 @@ on:
 
 env:
   DD_APPSEC_WAF_TIMEOUT: 1m # Increase time WAF time budget to reduce CI flakiness
+  GOEXPERIMENT: synctest # TODO: remove once go1.25 is the minimum supported version
 
 permissions:
   contents: read
@@ -51,7 +52,7 @@ jobs:
         run: |
           "normalized_workspace=${{ github.workspace }}" >> $env:GITHUB_ENV
       - name: Checkout
-        uses: actions/checkout@09d2acae674a48949e3602304ab46fd20ae0c42f # v2.7.0
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v2.7.0
         with:
           ref: ${{ inputs.ref || github.ref }}
       - name: Setup Go and development tools
