@@ -10,4 +10,3 @@ meta:
 
 extends:
   - ./orchestrion.client.yml
-  - ./orchestrion.server.yml
